@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(238, 236, 236);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height:100vh;
+    margin:0;
+    background-image: url("pic.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+
+
+}
+
+.quiz-container{
+    width:800px;
+    max-width:100%;
+    border-radius: 20px;
+    background-color:rgb(255, 255, 255);
+}
+
+.quiz{
+
+    padding:3.5rem;
+   
+}
+
+h1{
+    margin:0px;
+    color:rgb(3, 66, 66);
+    padding:1rem;
+    text-align: center;
+}
+
+
+input[type="radio"]
+{
+    
+   display:none;
+}
+
+label{
+
+  position:relative;
+  display:flex;
+  align-items: center;
+ 
+  padding:10px 50px;
+  font-size:20px;
+  color:green;
+ 
+  
+
+
+}
+
+label::before{
+
+
+    content:" ";
+    height:20px;
+    width:20px;border:3px solid green;border-radius:50%;
+    margin-right:20px;
+
+
+}
+
+
+
+input[type="radio"]:checked +label{
+    background-color: #ffd900;color:rgb(3, 66, 66);
+}
+
+input[type="radio"]:checked+label::before{
+
+  height:16px;
+  width:16px;border:6px solid white;
+
+}
+
+
+ul{
+   
+    border-color: none;
+    list-style: none;
+    
+}
+
+ul li{
+
+    margin:1.5rem 0;
+}
+
+
+button {
+    width:100%;
+    padding:1.3rem;
+    
+    
+ letter-spacing:6px;
+    border:none;
+    background-color:rgb(3, 66, 66);
+    color:white;
+    font-size: 1.3rem;
+    font-weight:bold;
+    cursor:pointer;
+    border-radius: 0px 0px 20px 20px;
+  
+    color: white;
+    transition: ease-out 0.3s;
+  
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+   
+  
+    position: relative;
+    z-index: 1;
+
+}
+
+
+
+#submit::before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    right: 50%;
+    bottom: 0%;
+    opacity: 0;
+    content: "";
+    background-color: #ffd900;
+
+}
+
+#submit:hover::before {
+    transition: 0.5s all ease;
+    left: 0%;
+    right: 0%;
+    opacity: 1;
+    z-index: -1;
+    border-radius: 0px 0px 20px 20px;
+ 
+
+}
+
+#submit:hover{
+
+    color:rgb(3, 66, 66);
+    font-weight: bold;
+}
+
+
+/*function deselect()
+{
+
+    answereles.forEach(answerele)
+    {
+        answerel.checked=false;
+    }
+
+}*/
